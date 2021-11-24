@@ -20,7 +20,7 @@
     <h1>Iniciando estudos DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em Javascript.</p>
-    <div>Clique em mim</div>
+    <div id="msg">Clique em mim</div>
 
     <script>
         var corpo = window.document.body
@@ -30,6 +30,12 @@
         corpo.style.background = 'black'
 
         document.write(p1.innerHTML) // inner html pega as tags filhas
+
+        var d = document.getElementById('msg')
+        d.style.cursor = 'pointer'
+
+        var u = document.querySelector('div#msg')
+        u.style.color = 'red'
 
     </script>
 </body>
