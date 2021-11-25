@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data e hora</title>
+</head>
+<body>
+    <div id="hr">
+        Ola
+    </div> 
+
+
+    <script>
+        var relogio = document.getElementById('hr')
+        var agora = new Date()
+        var hora = agora.getHours()
+        var minuto = agora.getMinutes()
+        var segundo = agora.getSeconds()
+
+        var dia = agora.getDate() 
+        var mes = agora.getMonth() + 1
+        var ano = agora.getUTCFullYear()
+
+        data = `${dia}/${mes}/${ano}`
+
+        console.log(hora)
+        console.log(dia)
+        relogio.innerHTML = `são exatamente ${hora}:${minuto}:${segundo}`
+
+        relogio.innerHTML += `<br>A data de hoje é ${data}`
+
+    </script>
+
+
+</body>
+</html>
